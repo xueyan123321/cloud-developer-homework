@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build: 
+      context: .
+    image: 15355458156/reverseproxy-assignment
+  backend_user:
+    build:
+      context: ../../udacity-restapi-user
+    image: 15355458156/udacity-restapi-user-assignment
+  backend_feed:
+    build:
+      context: ../../udacity-restapi-feed
+    image: 15355458156/udacity-restapi-feed-assignment
+  frontend:
+    build:
+      context: ../../udacity-frontend
+    image: 15355458156/udacity-front-assignment
