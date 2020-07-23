@@ -19,7 +19,7 @@ before_install:
 - mkdir ${HOME}/.kube
 - cat kubeconfig-base64 | base64 --decode > ${HOME}/.kube/config
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- echo 'dockerhub credentials configured'
+- echo 'dockerhub credentials configured ok'
 install:
 - docker-compose -f udacity-assignments/udacity-deployment/docker/docker-compose-build.yaml
   build --parallel
