@@ -3,21 +3,22 @@ kind: Deployment
 metadata:
   labels:
     service: backend-feed
-    version: v4
-  name: backend-feed-v4
+    version: v5
+  name: backend-feed-v5
 spec: 
   replicas: 1
   selector:
     matchLabels:
       service: backend-feed
+      version: v5
   template:
     metadata:
       labels:
         service: backend-feed
-        version: v4
+        version: v5
     spec:
       containers: 
-      - image: 15355458156/udacity-restapi-feed-assignment:latest
+      - image: 15355458156/udacity-restapi-feed-assignment:new
         name: backend-feed
         imagePullPolicy: Always
         resources:
